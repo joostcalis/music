@@ -1,0 +1,17 @@
+<div class="col-sm-6 col-md-4">
+  <div class="caption">
+    <h3><%= song.title %></h3>
+    <p><%= song.release_date %></p>
+    <p> highest hot100 ranking: <%= song.highest_chart_rating %> </p>
+
+    <article>
+      <h3>Performing artist</h3>
+      <p>
+        <%= song.artist.first_name %> <%= song.artist.last_name %>
+      </p>
+    </article>
+    <p>
+        <%= link_to "Read more", song.artist, class: "btn btn-primary", role: "button" %>
+    </p>
+  </div>
+</div>

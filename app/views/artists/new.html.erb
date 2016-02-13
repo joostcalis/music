@@ -1,0 +1,27 @@
+
+  <div class="artistform">
+    <h4>New Artist</h4>
+
+<%= form_for @artist do |f| %>
+
+<div>
+  <p><%= f.label :first_name %></p>
+<%= f.text_field :first_name %>
+</div>
+<div>
+  <p><%= f.label :last_name %></p>
+  <%= f.text_field :last_name %>
+</div>
+<div>
+  <p><%= f.label :birth_date %></p>
+  <%= f.date_select :birth_date %>
+</div>
+<div>
+  <p><%= f.label :photo %></p>
+  <%= f.file_field :photo %>
+</div>
+<div>
+  <%= f.submit "Save artist!" %>
+  <% end %>
+</div>
+</div>

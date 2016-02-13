@@ -1,0 +1,18 @@
+<%=form_for @song, url: artist_songs_path, html: { method: :post } do |f| %>
+
+<div>
+  <p><%= f.label :title %></p>
+<%= f.text_field :title %>
+</div>
+<div>
+  <p><%= f.label :highest_chart_rating %></p>
+  <%= f.text_field :highest_chart_rating %>
+</div>
+<div>
+  <p><%= f.label :release_date %></p>
+  <%= f.date_select :release_date %>
+</div>
+<div>
+  <%= f.submit "Save song!" %>
+  <% end %>
+</div>

@@ -1,0 +1,26 @@
+<div class="artist">
+  <h3>
+    <%= artist.first_name %>
+    <%= artist.last_name %>
+    <%= artist.birth_date %>
+    <%= image_tag artist.photo.thumb %>
+    <%= link_to "Go to artist's page", artist, class: "btn btn-primary", role: "button" %>
+
+  </h3>
+</div>
+  <h3> songs </h3>
+
+      <% artist.songs.each do |song| %>
+
+<div class="table">
+	<div class="row">
+		<div class="col-md-8 l-main">
+			<h4 class="l-title"><%= song.title %></h4>
+      <p>
+          <%= link_to "Go to artist's page", artist, class: "btn btn-primary", role: "button" %>
+      </p>
+		</div>
+	</div>
+</div>
+
+<% end %>

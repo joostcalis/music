@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="page-header">
+    <h1><%= @song.title %></h1>
+  </div>
+
+  <article class="song col-sm-8">
+    <p>highest chart rating: <%= @song.highest_chart_rating %></p>
+  </article>
+
+  <aside class="col-sm-2">
+    <h4> Performing artist </h4>
+    <div class="table">
+    	<div class="row">
+    		<div class="col-md-8 l-main">
+    			<h2><%= link_to "#{@song.artist.first_name} #{@song.artist.last_name} ", artist_path(@artist) %></h2>
+    		</div>
+    	</div>
+    </div>
+  </aside>
+</div>

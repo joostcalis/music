@@ -1,0 +1,11 @@
+<div class="artist">
+  <h3>
+    <%= @artist.first_name %>
+    <%= @artist.last_name %>
+    <%= @artist.birth_date %>
+    <%= image_tag @artist.photo.thumb %>
+  </h3>
+  <p>
+      <%= link_to "add song", new_artist_song_path(@artist.id), class: "btn btn-primary", role: "button" %>
+  </p>
+</div>
