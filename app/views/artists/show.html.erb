@@ -5,6 +5,11 @@
     <%= @artist.birth_date %>
     <%= image_tag @artist.photo.thumb %>
   </h3>
+  <% @artist.songs.each do |song| %>
+    <p> <%= link_to song.title, artist_song_path(@artist.id, song.id) %> </p>
+    <% end %>
+
+
   <p>
       <%= link_to "add song", new_artist_song_path(@artist.id), class: "btn btn-primary", role: "button" %>
   </p>

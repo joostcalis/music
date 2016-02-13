@@ -15,10 +15,8 @@
 <div class="table">
 	<div class="row">
 		<div class="col-md-8 l-main">
-			<h4 class="l-title"><%= song.title %></h4>
-      <p>
-          <%= link_to "Go to artist's page", artist, class: "btn btn-primary", role: "button" %>
-      </p>
+			<p> <%= link_to song.title, artist_song_path(artist.id, song.id) %></p>
+
 		</div>
 	</div>
 </div>
