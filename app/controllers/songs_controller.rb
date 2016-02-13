@@ -3,6 +3,7 @@ class SongsController < ApplicationController
   def new
     @song = Song.new
   end
+  
 
   def index
     @songs = Song.joins(:artist).all
